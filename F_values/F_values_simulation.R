@@ -37,17 +37,20 @@ summary(table)
 # "Precision","Recall","F1","F0.5","F5"
 
 ## F1
-ggplot(table, aes(x = Precision, y = Recall, fill=F1)) +
+plot_f1 <- ggplot(table, aes(x = Precision, y = Recall, fill=F1)) +
   geom_point(shape = 21, size = 5) +
   scale_fill_gradient(low = "white" , high = "black")
+ggsave(filename="F1.png", plot=plot_f1, width=5, height=5, dpi=100)
 
 ## F0.5
-ggplot(table, aes(x = Precision, y = Recall, fill=F0.5)) +
+plot_f05 <- ggplot(table, aes(x = Precision, y = Recall, fill=F0.5)) +
   geom_point(shape = 21, size = 5) +
   scale_fill_gradient(low = "white" , high = "black")
+ggsave(filename="F05.png", plot=plot_f05, width=5, height=5, dpi=100)
 
 ## F5
-ggplot(table, aes(x = Precision, y = Recall, fill=F5)) +
+plot_f5 <- ggplot(table, aes(x = Precision, y = Recall, fill=F5)) +
   geom_point(shape = 21, size = 5) +
   scale_fill_gradient(low = "white" , high = "black")
+ggsave(filename="F5.png", plot=plot_f5, width=5, height=5, dpi=100)
 
