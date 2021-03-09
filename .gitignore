@@ -1,12 +1,14 @@
-i# jupyter
-.ipynb_checkpoints
+# jupyter
+*.ipynb_checkpoints
 
 # tmp folder
 tmp
 
 # mac files
-.DS_Store
+*.DS_Store
 
-# R project
-.Rproj
+# R project, archives
+*.Rproj
+*.Rhistory
+*.Rproj.user
 
