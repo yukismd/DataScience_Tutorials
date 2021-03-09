@@ -1,0 +1,12 @@
+i# jupyter
+.ipynb_checkpoints
+
+# tmp folder
+tmp
+
+# mac files
+.DS_Store
+
+# R project
+.Rproj
+
