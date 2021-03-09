@@ -5,9 +5,9 @@
 tmp
 
 # mac files
-*.DS_Store
+.DS_Store
 
 # R project, archives
 *.Rproj
 *.Rhistory
-*.Rproj.user
+.Rproj.user
