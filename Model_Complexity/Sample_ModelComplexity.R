@@ -18,7 +18,7 @@ plot(x, y, xlim=c(-9,12), ylim=c(-690,750))
 res1 <- lm(y~x)
 summary(res1)    # R2=0.2115
 
-plot(x, y, xlim=c(-9,12), ylim=c(-690,750))
+plot(x, y, xlim=c(-9,12), ylim=c(-690,750), main='Under Fit')
 abline(res1, col="red")
 
 
@@ -36,7 +36,7 @@ y_out1 <- function(x){
     res2$coefficients[4] * x^3 )
   return(out)
 }
-curve(y_out1, -12, 12, col="red", xlim=c(-9,12), ylim=c(-690,750), ylab="")
+curve(y_out1, -12, 12, col="red", xlim=c(-9,12), ylim=c(-690,750), ylab="", main='Fit Perfectly')
 
 
 ### polynomial degree 15 ###
@@ -54,5 +54,5 @@ y_out2 <- function(x){
   }
   return(out)
 }
-curve(y_out2, -12, 12, col="red", xlim=c(-9,12), ylim=c(-690,750), ylab="")
+curve(y_out2, -12, 12, col="red", xlim=c(-9,12), ylim=c(-690,750), ylab="", main='Over Fit')
 
