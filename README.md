@@ -3,7 +3,7 @@
 - F1, F0.5, F5 Valuesの理解: [F_values](F_values/)
 - ニューラルネットワークによるテキスト分類(keras): [NN_Text_Classification](NN_Text_Classification/)
 - 不均衡データの理解: [Imbalanced_Data](Imbalanced_Data/)
-    - 不均衡データの影響
+    - 不均衡データに関して
     - SMOTE
 - K近傍法の理解: [KNN](KNN/) 
 - 主成分分析/固有値分解/特異値分解に関して: [PCA](PCA/)
