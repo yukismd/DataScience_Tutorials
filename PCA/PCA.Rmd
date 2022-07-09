@@ -1,0 +1,151 @@
+---
+title: "PCA"
+output: html_notebook
+---
+
+prcomp,eigen,svd関数の比較
+
+```{r}
+N <- 20
+
+set.seed(123)
+x1 <- rnorm(N)
+x2 <- x1 + 0.4*rnorm(N)
+x3 <- -1*x1 + 0.6*rnorm(N)
+x4 <- rnorm(N)
+
+X <- data.frame(x1, x2, x3, x4)
+X <- data.frame(scale(X))   # 標準化
+
+write.csv(X, file='../data/pca_sample.csv', row.names=FALSE)
+
+```
+
+```{r}
+apply(X, 2, mean)
+```
+
+```{r}
+apply(X, 2, sd)
+```
+
+```{r}
+plot(X)   # 散布図
+```
+
+```{r}
+cor(X)    # 相関係数行列
+```
+
+### 主成分分析
+
+```{r}
+# scale=TRUEは相関係数行列から実行の意味
+# 通常、相関係数行列から実行（元データを標準化すると同義）
+#res_pca <- prcomp(X, scale=TRUE)
+res_pca <- prcomp(X)   # 標準化済みなのでscaleの指定なし
+res_pca
+```
+
+```{r}
+## 各主成分の寄与率（固有値の平方根）
+summary(res_pca)
+```
+```{r}
+# 固有値の平方根。要するに主成分の標準偏差
+res_pca$sdev
+```
+```{r}
+# 以下に一致
+apply(res_pca$x, 2, sd)
+```
+```{r}
+## 主成分
+res_pca$x
+```
+
+```{r}
+# 元データと一緒に表示
+data.frame(X, res_pca$x)
+```
+```{r}
+## 固有ベクトル
+res_pca$rotation
+```
+
+```{r}
+## 負荷量行列（元データと主成分の相関）
+cor(X, res_pca$x)
+```
+
+### 固有値分解
+
+```{r}
+res_evd <- eigen(cor(X))    # 相関係数行列に対する固有値分解
+res_evd
+```
+```{r}
+## 固有値
+res_evd$values
+```
+
+```{r}
+# 主成分分析閣下の以下に一致
+res_pca$sdev^2
+```
+
+
+```{r}
+# 固有ベクトル
+res_evd$vectors
+```
+
+```{r}
+# 主成分分析結果の以下に一致
+res_pca$rotation
+```
+
+### 特異値分解
+
+```{r}
+res_svd <- svd(X)
+res_svd
+# 以下の分解を実施した
+# X = U D V'
+```
+
+```{r}
+U <- res_svd$u
+D <- diag(res_svd$d)
+V <- res_svd$v
+```
+
+```{r}
+# 元データ
+U %*% D %*% t(V)
+```
+
+```{r}
+# 元データに一致
+X
+```
+
+```{r}
+U %*% D    # 主成分
+```
+
+```{r}
+res_pca$x   # 主成分
+```
+
+```{r}
+V    # 固有ベクトル
+```
+
+```{r}
+res_evd$vectors    # 固有ベクトル
+```
+
+```{r}
+res_pca$rotation    # 固有ベクトル
+```
