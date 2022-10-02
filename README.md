@@ -9,3 +9,4 @@
 - 主成分分析/固有値分解/特異値分解に関して: [PCA](PCA/)
 - 異常検知: [Anomaly_Detection](Anomaly_Detection/)
 - モデルの複雑性: [Model_Complexity](Model_Complexity/)
+- PyTorchの学習: [PyTorch_learning](PyTorch_learning/)
