@@ -7,6 +7,9 @@ tmp
 # mac files
 .DS_Store
 
+# MS PPT
+.pptx
+
 # R project, archives
 *.Rproj
 *.Rhistory
@@ -14,3 +17,5 @@ tmp
 
 # data in PyTorch_learning
 PyTorch_learning/data
+
+__pycache__
