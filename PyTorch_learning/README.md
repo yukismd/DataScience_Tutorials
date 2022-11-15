@@ -6,3 +6,6 @@ PyTorchによる画像分類の学習（[image_clasification.ipynb](image_clasif
 
 学習済みモデル（Classification, Semantic Segmentation, Object Detection）の利用法（[image_using_pretrained.ipynb](image_using_pretrained.ipynb)）
 - PyTorch Documentの[MODELS AND PRE-TRAINED WEIGHTS](https://pytorch.org/vision/stable/models.html)のサンプルコードを実施
+
+PyTorch Image Model(timm)に関して（[timm.ipynb](timm.ipynb)）
+- https://github.com/rwightman/pytorch-image-models
