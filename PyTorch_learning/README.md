@@ -9,3 +9,7 @@ PyTorchによる画像分類の学習（[image_clasification.ipynb](image_clasif
 
 PyTorch Image Model(timm)に関して（[timm.ipynb](timm.ipynb)）
 - https://github.com/rwightman/pytorch-image-models
+
+物体検出：Faster RCNN（[image-fasterrcnn.ipynb](image-fasterrcnn.ipynb)）
+- [Pytorch Beginner Code : Faster RCNN](https://www.kaggle.com/code/chekoduadarsh/pytorch-beginner-code-faster-rcnn/notebook)を実行
+
