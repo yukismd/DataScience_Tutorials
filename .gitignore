@@ -19,3 +19,6 @@ tmp
 PyTorch_learning/data
 
 __pycache__
+
+# keys
+_secret
