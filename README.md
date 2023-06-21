@@ -10,3 +10,4 @@
 - 異常検知: [Anomaly_Detection](Anomaly_Detection/)
 - モデルの複雑性: [Model_Complexity](Model_Complexity/)
 - PyTorchの学習: [PyTorch_learning](PyTorch_learning/)
+- Open AI API: [PyTorch_learning](OpenAI/)
